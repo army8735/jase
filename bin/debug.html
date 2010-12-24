@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+<title>JAse Alpha</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<script>
+function debug(s) {
+	document.getElementById("d").innerHTML += s + "<br/>";
+}
+window.onload = function() {
+	document.body.ondblclick = function() {
+		document.getElementById("d").innerHTML = "";
+	}
+}
+</script>
+</head>
+<body style="background:#fff;">
+
+<form method="post">
+<textarea id="text">//javascript
+var reg = /**//[\/][/][*]([\S\s]*?)(?:[*][/;\[\]]|$)|[\/][/g;//](.*)|\
+"((?:\\\\|\\"|[^"///])*)"|'((?:\\\\|\\'|[^'\//;])*)'/gi;
+
+reg = 0;
+reg = 2 / 1 /**///
+/**///
+/**/
+//
+/reg/ 1;
+
+var num1 = 0.541;
+
+function f(test) {
+    return (test/*
+    /* //
+    ' "
+    { ;
+    \*/ && // /* // " ' { ; \
+    test &&
+    " /* // \
+    \" ' \
+    { ;" &&
+    ' /* // \
+    " \' \
+    { ;' &&
+    test);
+}</textarea>
+<object id="jase1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" style="width:100%;height:400px;">
+	<param name="movie" value="jase1.swf"/>
+	<param name="flashvars" value="target=text&amp;syntax=js"/>
+	<embed src="jase1.swf" flashvars="target=text&amp;syntax=js" name="jase1" type="application/x-shockwave-flash" style="width:100%;height:400px;"/>
+</object>
+</form>
+
+<div id="d"></div>
+</body>
+</html>
