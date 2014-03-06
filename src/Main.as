@@ -7,6 +7,7 @@
 	 * @email army8735@gmail.com
 	 * @date 2010-06-21
 	 */
+//test
 	import flash.display.*;
 	import flash.events.*;
 	import flash.external.*;
